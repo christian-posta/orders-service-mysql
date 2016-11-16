@@ -26,7 +26,7 @@ podTemplate(label: label, serviceAccount: 'jenkins', containers: [
         def envStage = utils.environmentNamespace('staging')
     def envProd = utils.environmentNamespace('production')
 
-    git 'http://192.168.64.16:31052/gogsadmin/orders-service.git'
+    git 'http://192.168.64.16:31052/gogsadmin/orders-service-mysql.git'
 
     echo 'NOTE: running pipelines for the first time will take longer as build and base docker images are pulled onto the node'
     container(name: 'jnlp') {
